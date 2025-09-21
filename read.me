@@ -1,0 +1,52 @@
+# Network Traffic Classification Using Random Forest
+
+## Overview
+This project uses a machine learning method called Random Forest to classify network traffic data as either "normal" or "attack." It helps detect malicious activity automatically by learning patterns in historical data.
+
+## Libraries Used
+- **pandas**: For managing data in tabular format
+- **scikit-learn**: For all machine learning tasks including model building, training, evaluation, and preprocessing
+- **numpy** and **scipy**: Required libraries that support scikit-learn functions
+
+## How It Works — Step-by-step
+
+1. Load data from a CSV into a DataFrame.
+2. Separate data into features (inputs) and labels (what to predict).
+3. Fill missing values with the most frequent value in each column.
+4. Convert categorical string features to numerical values.
+5. Convert labels into binary form (0 = normal, 1 = attack).
+6. Split data into training (70%) and testing (30%) sets, keeping class proportions balanced (stratify).
+7. Use GridSearchCV to find the best hyperparameters for Random Forest.
+8. Train the best model on the training data.
+9. Evaluate the model using a confusion matrix and classification report.
+
+## Key Concepts
+
+- **Stratify**: Keeps the ratio of classes the same in both training and testing sets to avoid bias.
+- **Random Forest**: Combines multiple decision trees to improve accuracy and reduce overfitting.
+- **Hyperparameters**: Settings like the number of trees (`n_estimators`) that govern how the model learns.
+- **Evaluation Metrics**:
+  - **Accuracy:** Overall rate of correct predictions.
+  - **Precision:** Correctness of "attack" predictions.
+  - **Recall:** Ability to find all actual attacks.
+  - **F1-Score:** Harmonic mean of precision and recall.
+
+## How to Run
+
+1. Place your dataset (`KDDDataset.txt`) in the project folder.  
+2. Install required libraries by running:  
+
+pip install pandas scikit-learn numpy scipy
+
+3. Run the Jupyter notebook (`.ipynb`) or Python script.  
+4. View printed results to understand model performance.
+
+## Author
+ft-FiasCode
+
+---
+
+## License
+MIT License
+
+This README is designed for beginners and provides easy steps to get started with network traffic classification using machine learning.
