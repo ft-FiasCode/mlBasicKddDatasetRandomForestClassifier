@@ -1,248 +1,363 @@
 <div align="center">
 
-# 🌐 Network Traffic Classification Using Random Forest
+# 🚦 Network Traffic Classification Using Random Forest
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge\&logo=python\&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Random%20Forest-green?style=for-the-badge)
-![scikit-learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge\&logo=scikit-learn\&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge\&logo=pandas\&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge\&logo=numpy\&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&pause=1000&center=true&vCenter=true&width=700&lines=Machine+Learning+for+Network+Intrusion+Detection;Random+Forest+Traffic+Classification;Cybersecurity+%2B+Machine+Learning+Project;Detect+Malicious+Network+Traffic+Automatically" alt="Typing Animation" />
 
-<br/>
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-ScikitLearn-orange)
+![Status](https://img.shields.io/badge/Project-Active-success)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-> **A machine learning project that classifies network traffic as either normal or malicious using a Random Forest model.**
-
-<br/>
-
-[📚 Project Overview](#-project-overview) • [🧰 Libraries Used](#-libraries-used) • [⚙️ How It Works](#️-how-it-works--step-by-step) • [🧠 Key Concepts](#-key-concepts) • [🚀 Running the Project](#-how-to-run) • [👤 Author](#-author)
+A beginner-friendly machine learning project that classifies network traffic as **Normal** or **Attack** using the **Random Forest algorithm**.
 
 </div>
 
 ---
 
-## 📚 Project Overview
+# 📑 Table of Contents
 
-This project demonstrates how **machine learning can be used to detect malicious network activity**.
-
-Using the **Random Forest algorithm**, the system analyzes network traffic data and classifies each connection as:
-
-* ✅ **Normal traffic**
-* 🚨 **Attack / malicious traffic**
-
-By learning patterns from historical data, the model can **automatically identify suspicious behavior**, helping improve cybersecurity monitoring systems.
-
-This project is designed to be **simple, educational, and beginner-friendly**, making it a great introduction to:
-
-* Machine learning
-* cybersecurity analytics
-* classification algorithms
-* real-world data processing
-
----
-
-## 🧰 Libraries Used
-
-The following Python libraries are used in this project:
-
-| Library             | Purpose                                                                 |
-| ------------------- | ----------------------------------------------------------------------- |
-| 🐼 **pandas**       | Managing and manipulating tabular datasets                              |
-| 🤖 **scikit-learn** | Machine learning model training, evaluation, and preprocessing          |
-| 🔢 **numpy**        | Numerical computations                                                  |
-| 🔬 **scipy**        | Provides additional scientific computing tools required by scikit-learn |
-
-These libraries form a **powerful Python ecosystem for data science and machine learning.**
+* Overview
+* Project Objective
+* Tools Used
+* Libraries USED
+* How It Works — Step-by-step
+* Workflow
+* Key Concepts
+* What I Learned
+* Through this project I also gained insight into
+* Project Structure
+* How to Run the Project
+* Future Improvements
+* Author
+* License
 
 ---
 
-## ⚙️ How It Works — Step-by-step
+# 📘 Overview
 
-The project follows a structured machine learning workflow:
+Network security is one of the most critical challenges in modern computing systems. As networks grow larger and more complex, detecting malicious activities manually becomes extremely difficult.
 
-### 1️⃣ Load the Dataset
+Machine learning provides a powerful solution by automatically analyzing patterns in network traffic and identifying suspicious behavior.
 
-Network traffic data is loaded from a CSV file into a **Pandas DataFrame**.
+This project demonstrates how a **Random Forest classifier** can be used to analyze network traffic and classify each connection as either:
 
-### 2️⃣ Separate Features and Labels
+• **Normal traffic**
+• **Attack traffic**
 
-The dataset is divided into:
+By training the model on historical network data, it learns patterns that distinguish safe connections from malicious ones.
 
-* **Features (X)** → input variables
-* **Labels (y)** → what we want to predict
-
-### 3️⃣ Handle Missing Values
-
-Missing values are replaced with the **most frequent value in each column**.
-
-### 4️⃣ Encode Categorical Data
-
-Categorical string features are converted into **numerical values** so the machine learning model can understand them.
-
-### 5️⃣ Convert Labels to Binary
-
-Traffic labels are converted into:
-
-| Label  | Value |
-| ------ | ----- |
-| Normal | 0     |
-| Attack | 1     |
-
-### 6️⃣ Split the Dataset
-
-The dataset is split into:
-
-* **70% training data**
-* **30% testing data**
-
-The split uses **stratification** to keep class proportions balanced.
-
-### 7️⃣ Hyperparameter Optimization
-
-The project uses **GridSearchCV** to find the best parameters for the Random Forest model.
-
-Example parameters tuned include:
-
-* `n_estimators`
-* `max_depth`
-* `min_samples_split`
-
-### 8️⃣ Train the Model
-
-The best model configuration is trained using the **training dataset**.
-
-### 9️⃣ Evaluate Model Performance
-
-The model is evaluated using:
-
-* Confusion Matrix
-* Classification Report
-
-These metrics help measure how well the model detects attacks.
+The project also demonstrates a **complete machine learning workflow**, including preprocessing, model training, hyperparameter tuning, and evaluation.
 
 ---
 
-## 🧠 Key Concepts
+# 🎯 Project Objective
 
-Understanding these concepts will help you understand the project better.
+The main goals of this project are:
 
-### 🔹 Stratify
-
-Stratification ensures that the **class distribution remains balanced** between training and testing datasets.
-
-This prevents model bias.
-
----
-
-### 🌲 Random Forest
-
-Random Forest is an **ensemble machine learning algorithm** that combines multiple decision trees.
-
-Benefits:
-
-* Higher accuracy
-* Reduced overfitting
-* Better generalization
+• Build a **machine learning classifier for intrusion detection**
+• Understand how **Random Forest works for classification tasks**
+• Learn the **complete machine learning pipeline**
+• Practice **data preprocessing and feature encoding**
+• Evaluate model performance using **standard ML metrics**
 
 ---
 
-### ⚙️ Hyperparameters
+# 🛠 Tools Used
 
-Hyperparameters control **how a machine learning model learns**.
+The following tools were used to build this project.
+
+### Python
+
+The primary programming language used to implement the machine learning system.
+
+### Jupyter Notebook
+
+Used for experimentation, testing, and interactive model development.
+
+### Git & GitHub
+
+Used for version control and project sharing.
+
+---
+
+# 📚 Libraries USED
+
+This project relies on several powerful Python libraries.
+
+### pandas
+
+Used for data loading, cleaning, and manipulation of tabular datasets.
+
+### scikit-learn
+
+Provides machine learning tools including:
+
+• Random Forest classifier
+• Train-test splitting
+• Hyperparameter tuning
+• Evaluation metrics
+
+### numpy
+
+Used for numerical operations and array manipulation.
+
+### scipy
+
+Supports scientific computations used by machine learning algorithms.
+
+Install the required libraries using:
+
+```
+pip install pandas scikit-learn numpy scipy
+```
+
+---
+
+# ⚙️ How It Works — Step-by-step
+
+The machine learning system works through the following steps:
+
+1. Load the dataset into a pandas DataFrame.
+2. Separate the dataset into **features (inputs)** and **labels (target values)**.
+3. Handle missing values using the **most frequent value in each column**.
+4. Convert categorical features into numerical form.
+5. Convert labels into binary values:
+
+```
+0 = Normal Traffic
+1 = Attack Traffic
+```
+
+6. Split the dataset into **training data (70%)** and **testing data (30%)**.
+7. Apply **GridSearchCV** to find the best Random Forest parameters.
+8. Train the optimized model using the training dataset.
+9. Evaluate model performance using classification metrics.
+
+---
+
+# 🔄 Workflow
+
+Below is the complete machine learning workflow used in this project.
+
+```mermaid
+flowchart TD
+    A[Load Dataset] --> B[Data Cleaning]
+    B --> C[Handle Missing Values]
+    C --> D[Encode Categorical Features]
+    D --> E[Split Train and Test Data]
+    E --> F[Hyperparameter Tuning using GridSearchCV]
+    F --> G[Train Random Forest Model]
+    G --> H[Evaluate Model]
+    H --> I[Classification Results]
+```
+
+This diagram represents the **full machine learning pipeline** implemented in the project.
+
+---
+
+# 🧠 Key Concepts
+
+## Random Forest
+
+Random Forest is an **ensemble learning algorithm** that combines multiple decision trees to improve prediction accuracy.
+
+Instead of relying on a single tree, Random Forest creates many trees and aggregates their predictions.
+
+Advantages:
+
+• High accuracy
+• Reduced overfitting
+• Handles complex datasets well
+
+---
+
+## Stratify
+
+Stratification ensures that **training and testing datasets maintain the same class distribution**.
 
 Example:
 
-`n_estimators` → number of trees in the forest.
+```
+Normal Traffic = 70%
+Attack Traffic = 30%
+```
 
-More trees usually improve stability but increase computation time.
-
----
-
-### 📊 Evaluation Metrics
-
-| Metric        | Meaning                                   |
-| ------------- | ----------------------------------------- |
-| **Accuracy**  | Overall percentage of correct predictions |
-| **Precision** | How accurate attack predictions are       |
-| **Recall**    | Ability to detect all actual attacks      |
-| **F1-Score**  | Balance between precision and recall      |
-
-These metrics help measure the **effectiveness of the intrusion detection system.**
+Both datasets preserve this ratio to prevent bias.
 
 ---
 
-## 🚀 How to Run
+## Hyperparameters
 
-Follow these steps to run the project on your machine.
+Hyperparameters are configuration values that control how the model learns.
 
-### 1️⃣ Add Dataset
+Examples:
 
-Place the dataset file inside the project folder:
+```
+n_estimators
+max_depth
+min_samples_split
+```
 
-`KDDDataset.txt`
+These parameters are optimized using **GridSearchCV**.
 
 ---
 
-### 2️⃣ Install Required Libraries
+## Evaluation Metrics
 
-Run the following command:
+The model performance is evaluated using several metrics.
 
+### Accuracy
+
+Overall proportion of correct predictions.
+
+```
+Accuracy = Correct Predictions / Total Predictions
+```
+
+### Precision
+
+Measures how many predicted attacks were actually attacks.
+
+### Recall
+
+Measures how many real attacks were detected.
+
+### F1 Score
+
+Balances both precision and recall.
+
+---
+
+# 🎓 What I Learned
+
+Through this project, I gained practical experience in:
+
+• Building a **machine learning classification model**
+• Data preprocessing and feature engineering
+• Hyperparameter tuning using **GridSearchCV**
+• Understanding ensemble learning methods
+• Evaluating models using **classification metrics**
+
+This project strengthened my understanding of **machine learning and cybersecurity applications**.
+
+---
+
+# 💡 Through this project I also gained insight into
+
+• How machine learning can support **intrusion detection systems**
+• The importance of **data preprocessing** in ML pipelines
+• Why ensemble models like **Random Forest perform well**
+• How balanced datasets improve model reliability
+• Best practices for structuring a **machine learning project**
+
+---
+
+# 📁 Project Structure
+
+```
+network-traffic-classification
+│
+├── KDDDataset.txt
+├── model.ipynb
+├── model.py
+├── README.md
+```
+
+Description:
+
+• **KDDDataset.txt** → Network traffic dataset
+• **model.ipynb** → Jupyter notebook implementation
+• **model.py** → Python script version of the model
+• **README.md** → Project documentation
+
+---
+
+# ▶️ How to Run the Project
+
+### Step 1 — Clone the Repository
+
+```
+git clone https://github.com/ft-FiasCode/network-traffic-classification.git
+```
+
+### Step 2 — Navigate to the Project Directory
+
+```
+cd network-traffic-classification
+```
+
+### Step 3 — Install Required Libraries
+
+```
 pip install pandas scikit-learn numpy scipy
+```
+
+### Step 4 — Add the Dataset
+
+Place the dataset file in the project directory:
+
+```
+KDDDataset.txt
+```
+
+### Step 5 — Run the Project
+
+Run using Jupyter Notebook:
+
+```
+jupyter notebook
+```
+
+or run the Python script:
+
+```
+python model.py
+```
+
+The model will train and display evaluation results.
 
 ---
 
-### 3️⃣ Run the Notebook or Script
+# 🚀 Future Improvements
 
-Open the **Jupyter Notebook** or run the Python script:
+Possible improvements for this project include:
 
-* `.ipynb` file
-* `.py` script
-
----
-
-### 4️⃣ View Results
-
-The program will output:
-
-* Confusion Matrix
-* Classification Report
-* Model evaluation metrics
-
-These results show **how well the model detects network attacks**.
+• Adding **data visualization using Matplotlib and Seaborn**
+• Testing additional algorithms such as **SVM and Logistic Regression**
+• Building a **real-time intrusion detection system**
+• Deploying the model using **Flask or FastAPI**
+• Performing **feature importance analysis**
 
 ---
 
-## 📁 Example Project Structure
+# 👨‍💻 Author
 
-Network-Traffic-Classification
-┣ dataset
-┃ ┗ KDDDataset.txt
-┣ notebooks
-┃ ┗ network_classification.ipynb
-┣ models
-┃ ┗ random_forest_model.pkl
-┣ src
-┃ ┗ classification_script.py
-┗ README.md
-
----
-
-## 👤 Author
+![Author](https://img.shields.io/badge/Author-ft--FiasCode-blue?style=flat&logo=github)
+![GitHub](https://img.shields.io/badge/GitHub-ft--FiasCode-181717?logo=github&logoColor=white)
 
 **ft-FiasCode**
 
+GitHub: [https://github.com/ft-FiasCode](https://github.com/ft-FiasCode)
+
 ---
 
-## 📄 License
+# 📜 License
 
-This project is licensed under the **MIT License**.
+MIT License: ![License](https://img.shields.io/badge/License-MIT-green.svg)
+
+This project is open-source and free to use, modify, and distribute.
+
+
+![License](https://img.shields.io/badge/License-MIT-green)
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=yellow)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+
 
 ---
 
 <div align="center">
 
-### ⭐ If you find this project helpful, please consider giving it a star!
-
-*Happy Learning & Secure Networking! 🌐🚀*
+⭐ If you found this project useful, consider **starring the repository**.
 
 </div>
