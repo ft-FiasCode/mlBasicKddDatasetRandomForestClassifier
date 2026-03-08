@@ -312,7 +312,7 @@ jupyter notebook
 or run the Python script:
 
 ```
-python model.py
+python nid.py
 ```
 
 The model will train and display evaluation results.
